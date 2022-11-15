@@ -18,8 +18,8 @@
             <span>首页</span>
           </template>
           <el-menu-item-group>
-            <el-menu-item index="1-1">学生列表</el-menu-item>
-            <el-menu-item index="1-2">学生列表2</el-menu-item>
+            <el-menu-item index="1-1">学生信息列表</el-menu-item>
+            <el-menu-item index="1-2">学生信息展示</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
       </el-menu>
@@ -76,17 +76,32 @@
             <el-button type="info" @click="clearCondition">清空 <i class="el-icon-refresh"></i></el-button>
             <el-button type="primary" @click="searching">查询 <i class="el-icon-search"></i></el-button>
             <el-button type="success" @click="addRecord">新增 <i class="el-icon-circle-plus"></i></el-button>
+            <el-button type="danger" @click="deleteRecord">批量删除 <i class="el-icon-delete-solid"></i></el-button>
           </el-form-item>
         </el-form>
 
         <el-table :data="tableData" :header-cell-class-name="headerBg">
-          <el-table-column prop="date" label="日期" width="140">
+          <el-table-column prop="id" label="序号" width="60">
           </el-table-column>
-          <el-table-column prop="name" label="姓名" width="120">
+          <el-table-column prop="studentId" label="学号">
           </el-table-column>
-          <el-table-column prop="address" label="地址">
+          <el-table-column prop="studentName" label="姓名">
           </el-table-column>
-          <el-table-column prop="address" label="操作" width="200px">
+          <el-table-column prop="term" label="学年" width="180">
+          </el-table-column>
+          <el-table-column prop="height" label="身高(cm)" width="150">
+          </el-table-column>
+          <el-table-column prop="weight" label="体重(kg)" width="150">
+          </el-table-column>
+          <el-table-column prop="vitalCapacity" label="肺活量()" width="150">
+          </el-table-column>
+          <el-table-column prop="sitForwardBend" label="坐姿体前屈()" width="150">
+          </el-table-column>
+          <el-table-column prop="dash50" label="50m跑成绩" width="150">
+          </el-table-column>
+          <el-table-column prop="long1000" label="长跑成绩(男:1000m 女:800m)" width="150">
+          </el-table-column>
+          <el-table-column prop="address" label="操作" width="150px">
             <el-button type="info" icon="el-icon-edit" @click="addRecord" circle></el-button>
             <el-button type="danger" icon="el-icon-circle-close" @click="deleteRecord" circle></el-button>
           </el-table-column>
@@ -109,6 +124,8 @@
 </template>
 
 <script>
+
+import request from "@/utils/request";
 
 export default {
   name: 'HomeView',
@@ -134,13 +151,21 @@ export default {
     }
 
   },
+  created() {
+    this.searching()
+  },
   methods: {
     clearCondition() {
       //清空查询条件
-      this.searchForm = {};
+      this.searchForm = {}
     },
     searching() {
       //查询
+      request.get("http://localhost:9090/bodyData/page?pageNum=1&pageSize=5").then(res => {
+        console.log(res)
+        this.tableData = res.records
+        this.totalNum = res.total
+      })
     },
     addRecord() {
       //新增
@@ -151,13 +176,13 @@ export default {
     collapse() {  // 点击收缩按钮触发
       this.isCollapse = !this.isCollapse
     },
-    handleSizeChange(val) {
-      console.log(`每页 ${val} 条`);
-      this.pageSize = val;
+    handleSizeChange(pageSize) {
+      console.log(`每页 ${pageSize} 条`)
+      this.pageSize = pageSize;
     },
-    handleCurrentChange(val) {
-      console.log(`当前页: ${val}`);
-      this.pageNum = val;
+    handleCurrentChange(pageNum) {
+      console.log(`当前页: ${pageNum}`)
+      this.pageNum = pageNum;
     },
   }
 }
