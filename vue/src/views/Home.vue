@@ -1,7 +1,5 @@
 <template>
-<div>
-  <h1>这是首页</h1>
-</div>
+  <div id="logo"></div>
 </template>
 
 <script>
@@ -16,3 +14,11 @@ export default {
   methods: {}
 }
 </script>
+
+<style scoped>
+#logo {
+  background: url("../assets/images/home-background.jpg");
+  background-size: 100% 100%;
+  height: 100%;
+}
+</style>

@@ -12,7 +12,9 @@ const routes = [
         redirect: '/home',
         children: [
             { path: 'home', name: '首页', component: () => import('../views/Home.vue'), },
-            { path: 'bodyData', name: '学生信息管理', component: () => import('../views/BodyData.vue'), }
+            { path: 'bodyData', name: '学生信息管理', component: () => import('../views/BodyData.vue'), },
+            { path: 'bodyDisplay', name: '学生信息趋势', component: () => import('../views/BodyDisplay.vue'), },
+            { path: 'scoreRank', name: '学生综合排名', component: () => import('../views/ScoreRank.vue'), },
         ]
     },
     /*{

@@ -1,7 +1,8 @@
 import axios from 'axios'
+import {serverIp} from "../../public/config";
 
 const request = axios.create({
-    baseURL: 'http://localhost:9090',
+    baseURL: `http://${serverIp}:9090`,
     timeout: 5000
 })
 

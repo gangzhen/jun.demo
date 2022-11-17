@@ -8,7 +8,7 @@
            router
   >
     <div style="height: 60px; line-height: 60px; text-align: center">
-      <img src="../assets/logo.png" alt="" style="width: 20px; position: relative; top: 5px; margin-right: 5px">
+      <img src="../assets/images/logo.png" alt="" style="width: 20px; position: relative; top: 5px; margin-right: 5px">
       <b style="color: white" v-show="!isCollapse">后台管理系统</b>
     </div>
     <el-menu-item index="/">
@@ -30,10 +30,16 @@
             <span slot="title">学生信息管理</span>
           </template>
         </el-menu-item>
-        <el-menu-item index="2-2">
+        <el-menu-item index="/bodyDisplay">
           <template slot="title">
             <i class="el-icon-s-data"></i>
-            <span slot="title">学生信息展示</span>
+            <span slot="title">学生信息趋势</span>
+          </template>
+        </el-menu-item>
+        <el-menu-item index="/scoreRank">
+          <template slot="title">
+            <i class="el-icon-s-flag"></i>
+            <span slot="title">学生综合排名</span>
           </template>
         </el-menu-item>
       </el-menu-item-group>
