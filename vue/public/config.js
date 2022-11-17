@@ -1,2 +1,2 @@
-export const serverIp = 'localhost'
-// export const serverIp = '122.112.204.97'
+// export const serverIp = 'localhost'
+export const serverIp = '122.112.204.97'
