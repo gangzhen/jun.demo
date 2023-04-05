@@ -26,7 +26,12 @@ public class BodyDataController {
     @Resource
     private IBodyDataService bodyDataService;
 
-    // 新增或者更新
+    /**
+     * @param bodyData 学生体质健康数据
+     * @description 新增或者更新数据
+     * @return: boolean
+     * @date 2023/4/5 13:20
+     */
     @PostMapping
     public boolean save(@RequestBody BodyData bodyData) {
         if ("男".equals(bodyData.getGender())) {
@@ -37,26 +42,57 @@ public class BodyDataController {
         return bodyDataService.saveOrUpdate(bodyData);
     }
 
+    /**
+     * @param id 学生体质数据唯一标识
+     * @description 根据ID删除数据
+     * @return: java.lang.Boolean
+     * @date 2023/4/5 13:23
+     */
     @DeleteMapping("/{id}")
     public Boolean delete(@PathVariable Integer id) {
         return bodyDataService.removeById(id);
     }
 
+    /**
+     * @param ids 学生体质健康数据唯一标识集合
+     * @description 批量删除ID集合数据
+     * @return: boolean
+     * @date 2023/4/5 13:24
+     */
     @DeleteMapping("/del/batch")
     public boolean deleteBatch(@RequestBody List<Integer> ids) {
         return bodyDataService.removeByIds(ids);
     }
 
+    /**
+     * @description 查找所有学生体质健康数据
+     * @return: java.util.List<com.demo.springboot.entity.BodyData>
+     * @date 2023/4/5 13:25
+     */
     @GetMapping
     public List<BodyData> findAll() {
         return bodyDataService.list();
     }
 
+    /**
+     * @param id 学生体质数据唯一标识
+     * @description 根据ID查找数据
+     * @return: com.demo.springboot.entity.BodyData
+     * @date 2023/4/5 13:26
+     */
     @GetMapping("/{id}")
     public BodyData findOne(@PathVariable Integer id) {
         return bodyDataService.getById(id);
     }
 
+    /**
+     * @param condition 查询条件
+     * @param pageNum   查询页码
+     * @param pageSize  查询页条数
+     * @description 条件分页查询
+     * @return: com.baomidou.mybatisplus.extension.plugins.pagination.Page<com.demo.springboot.entity.BodyData>
+     * @date 2023/4/5 13:33
+     */
     @PostMapping("/page")
     public Page<BodyData> findPage(@RequestBody ConditionRequest condition,
                                    @RequestParam Integer pageNum,
