@@ -27,19 +27,19 @@
         <el-menu-item index="/bodyData">
           <template slot="title">
             <i class="el-icon-s-custom"></i>
-            <span slot="title">学生信息管理</span>
+            <span slot="title">信息管理</span>
           </template>
         </el-menu-item>
         <el-menu-item index="/bodyDisplay">
           <template slot="title">
             <i class="el-icon-s-data"></i>
-            <span slot="title">学生信息趋势</span>
+            <span slot="title">趋势分析</span>
           </template>
         </el-menu-item>
         <el-menu-item index="/scoreRank">
           <template slot="title">
             <i class="el-icon-s-flag"></i>
-            <span slot="title">学生综合排名</span>
+            <span slot="title">排名系统</span>
           </template>
         </el-menu-item>
       </el-menu-item-group>
