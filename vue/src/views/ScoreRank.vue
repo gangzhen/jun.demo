@@ -35,7 +35,7 @@
       </el-table-column>
       <el-table-column prop="vitalCapacityPoint" label="肺活量得分" width="150" align="center">
       </el-table-column>
-      <el-table-column prop="vitalCapacityPoint" label="立定跳远得分" width="150" align="center">
+      <el-table-column prop="standJumpPoint" label="立定跳远得分" width="150" align="center">
       </el-table-column>
       <el-table-column prop="sitForwardBendPoint" label="坐姿体前屈得分" width="150" align="center">
       </el-table-column>
@@ -72,17 +72,261 @@ export default {
       term: '2021年',
       weightPoint: '10',
       vitalCapacityPoint: '10',
-      standJumpPoint: '上海市普陀区金沙江路 1518 弄',
+      standJumpPoint: '15',
       sitForwardBendPoint: '10',
       dash50Point: '10',
       longRunPoint: '10',
       points: '100',
     };
     return {
-      pageSize: 1,
-      pageNum: 10,
+      pageSize: 20,
+      pageNum: 1,
       totalNum: 20,
-      tableData: this.tableData = Array(20).fill(item),
+      tableData: [
+        {
+          studentId: 20190217,
+          studentName: '刘子昂',
+          gender: '男',
+          term: '2019年',
+          weightPoint: 15,
+          vitalCapacityPoint: 15,
+          standJumpPoint: 15,
+          sitForwardBendPoint: 10,
+          dash50Point: 10,
+          longRunPoint: 10,
+          points: 100
+        },{
+          studentId: 20190316,
+          studentName: '李书晔',
+          gender: '男',
+          term: '2019年',
+          weightPoint: 15,
+          vitalCapacityPoint: 15,
+          standJumpPoint: 15,
+          sitForwardBendPoint: 10,
+          dash50Point: 10,
+          longRunPoint: 10,
+          points: 100
+        },{
+          studentId: 20190407,
+          studentName: '王晟',
+          gender: '男',
+          term: '2019年',
+          weightPoint: 15,
+          vitalCapacityPoint: 15,
+          standJumpPoint: 15,
+          sitForwardBendPoint: 10,
+          dash50Point: 10,
+          longRunPoint: 10,
+          points: 100
+        },{
+          studentId: 20190327,
+          studentName: '潘天',
+          gender: '男',
+          term: '2019年',
+          weightPoint: 15,
+          vitalCapacityPoint: 15,
+          standJumpPoint: 15,
+          sitForwardBendPoint: 10,
+          dash50Point: 10,
+          longRunPoint: 10,
+          points: 100
+        },{
+          studentId: 20190615,
+          studentName: '张峻源',
+          gender: '男',
+          term: '2019年',
+          weightPoint: 15,
+          vitalCapacityPoint: 15,
+          standJumpPoint: 15,
+          sitForwardBendPoint: 10,
+          dash50Point: 10,
+          longRunPoint: 10,
+          points: 100
+        },{
+          studentId: 20190923,
+          studentName: '朱兆凯',
+          gender: '男',
+          term: '2019年',
+          weightPoint: 15,
+          vitalCapacityPoint: 15,
+          standJumpPoint: 15,
+          sitForwardBendPoint: 10,
+          dash50Point: 10,
+          longRunPoint: 10,
+          points: 100
+        },{
+          studentId: 20190911,
+          studentName: '李想',
+          gender: '男',
+          term: '2019年',
+          weightPoint: 15,
+          vitalCapacityPoint: 15,
+          standJumpPoint: 15,
+          sitForwardBendPoint: 10,
+          dash50Point: 10,
+          longRunPoint: 10,
+          points: 100
+        },{
+          studentId: 20190128,
+          studentName: '陈禹同',
+          gender: '男',
+          term: '2019年',
+          weightPoint: 15,
+          vitalCapacityPoint: 14,
+          standJumpPoint: 15,
+          sitForwardBendPoint: 10,
+          dash50Point: 10,
+          longRunPoint: 9,
+          points: 98
+        },{
+          studentId: 20191015,
+          studentName: '贾孟儒',
+          gender: '男',
+          term: '2019年',
+          weightPoint: 15,
+          vitalCapacityPoint: 14,
+          standJumpPoint: 15,
+          sitForwardBendPoint: 9,
+          dash50Point: 10,
+          longRunPoint: 10,
+          points: 98
+        },{
+          studentId: 20190514,
+          studentName: '赵赫',
+          gender: '男',
+          term: '2019年',
+          weightPoint: 15,
+          vitalCapacityPoint: 14,
+          standJumpPoint: 14,
+          sitForwardBendPoint: 10,
+          dash50Point: 10,
+          longRunPoint: 10,
+          points: 98
+        },{
+          studentId: 20190324,
+          studentName: '张皓琛',
+          gender: '男',
+          term: '2019年',
+          weightPoint: 15,
+          vitalCapacityPoint: 15,
+          standJumpPoint: 15,
+          sitForwardBendPoint: 9,
+          dash50Point: 9,
+          longRunPoint: 9,
+          points: 97
+        },{
+          studentId: 20190335,
+          studentName: '孔嘉昊',
+          gender: '男',
+          term: '2019年',
+          weightPoint: 15,
+          vitalCapacityPoint: 14,
+          standJumpPoint: 14,
+          sitForwardBendPoint: 9,
+          dash50Point: 9,
+          longRunPoint: 9,
+          points: 96
+        },{
+          studentId: 20190429,
+          studentName: '吕东泽',
+          gender: '男',
+          term: '2019年',
+          weightPoint: 15,
+          vitalCapacityPoint: 14,
+          standJumpPoint: 13,
+          sitForwardBendPoint: 8,
+          dash50Point: 9,
+          longRunPoint: 9,
+          points: 93
+        },{
+          studentId: 20190941,
+          studentName: '华瑞',
+          gender: '男',
+          term: '2019年',
+          weightPoint: 13,
+          vitalCapacityPoint: 13,
+          standJumpPoint: 15,
+          sitForwardBendPoint: 6,
+          dash50Point: 9,
+          longRunPoint: 10,
+          points: 91
+        },{
+          studentId: 20190232,
+          studentName: '周永康',
+          gender: '男',
+          term: '2019年',
+          weightPoint: 11,
+          vitalCapacityPoint: 15,
+          standJumpPoint: 13,
+          sitForwardBendPoint: 8,
+          dash50Point: 9,
+          longRunPoint: 9,
+          points: 90
+        },{
+          studentId: 20190634,
+          studentName: '吴思衡',
+          gender: '男',
+          term: '2019年',
+          weightPoint: 14,
+          vitalCapacityPoint: 14,
+          standJumpPoint: 14,
+          sitForwardBendPoint: 5,
+          dash50Point: 9,
+          longRunPoint: 9,
+          points: 90
+        },{
+          studentId: 20190619,
+          studentName: '李彦军',
+          gender: '男',
+          term: '2019年',
+          weightPoint: 13,
+          vitalCapacityPoint: 14,
+          standJumpPoint: 14,
+          sitForwardBendPoint: 9,
+          dash50Point: 10,
+          longRunPoint: 4,
+          points: 89
+        },{
+          studentId: 20190929,
+          studentName: '陈志浩',
+          gender: '男',
+          term: '2019年',
+          weightPoint: 15,
+          vitalCapacityPoint: 13,
+          standJumpPoint: 13,
+          sitForwardBendPoint: 6,
+          dash50Point: 10,
+          longRunPoint: 6,
+          points: 88
+        },{
+          studentId: 20190921,
+          studentName: '杨博宇',
+          gender: '男',
+          term: '2019年',
+          weightPoint: 12,
+          vitalCapacityPoint: 12,
+          standJumpPoint: 12,
+          sitForwardBendPoint: 10,
+          dash50Point: 7,
+          longRunPoint: 9,
+          points: 87
+        },
+        {
+          studentId: 20190121,
+          studentName: '谢钰磊',
+          gender: '男',
+          term: '2019年',
+          weightPoint: 11,
+          vitalCapacityPoint: 11,
+          standJumpPoint: 11,
+          sitForwardBendPoint: 9,
+          dash50Point: 9,
+          longRunPoint: 10,
+          points: 86
+        }
+
+      ],
       searchForm: {},
     }
   },
