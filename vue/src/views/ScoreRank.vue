@@ -85,7 +85,7 @@ export default {
       tableData: [
         {
           studentId: 20190217,
-          studentName: '刘子昂',
+          studentName: '刘*',
           gender: '男',
           term: '2019年',
           weightPoint: 15,
@@ -97,7 +97,7 @@ export default {
           points: 100
         },{
           studentId: 20190316,
-          studentName: '李书晔',
+          studentName: '李*',
           gender: '男',
           term: '2019年',
           weightPoint: 15,
@@ -109,7 +109,7 @@ export default {
           points: 100
         },{
           studentId: 20190407,
-          studentName: '王晟',
+          studentName: '王*',
           gender: '男',
           term: '2019年',
           weightPoint: 15,
@@ -121,7 +121,7 @@ export default {
           points: 100
         },{
           studentId: 20190327,
-          studentName: '潘天',
+          studentName: '潘*',
           gender: '男',
           term: '2019年',
           weightPoint: 15,
@@ -133,7 +133,7 @@ export default {
           points: 100
         },{
           studentId: 20190615,
-          studentName: '张峻源',
+          studentName: '张*',
           gender: '男',
           term: '2019年',
           weightPoint: 15,
@@ -145,7 +145,7 @@ export default {
           points: 100
         },{
           studentId: 20190923,
-          studentName: '朱兆凯',
+          studentName: '朱*',
           gender: '男',
           term: '2019年',
           weightPoint: 15,
@@ -157,7 +157,7 @@ export default {
           points: 100
         },{
           studentId: 20190911,
-          studentName: '李想',
+          studentName: '李*',
           gender: '男',
           term: '2019年',
           weightPoint: 15,
@@ -169,7 +169,7 @@ export default {
           points: 100
         },{
           studentId: 20190128,
-          studentName: '陈禹同',
+          studentName: '陈*',
           gender: '男',
           term: '2019年',
           weightPoint: 15,
@@ -181,7 +181,7 @@ export default {
           points: 98
         },{
           studentId: 20191015,
-          studentName: '贾孟儒',
+          studentName: '贾*',
           gender: '男',
           term: '2019年',
           weightPoint: 15,
@@ -193,7 +193,7 @@ export default {
           points: 98
         },{
           studentId: 20190514,
-          studentName: '赵赫',
+          studentName: '赵*',
           gender: '男',
           term: '2019年',
           weightPoint: 15,
@@ -205,7 +205,7 @@ export default {
           points: 98
         },{
           studentId: 20190324,
-          studentName: '张皓琛',
+          studentName: '张*',
           gender: '男',
           term: '2019年',
           weightPoint: 15,
@@ -217,7 +217,7 @@ export default {
           points: 97
         },{
           studentId: 20190335,
-          studentName: '孔嘉昊',
+          studentName: '孔*',
           gender: '男',
           term: '2019年',
           weightPoint: 15,
@@ -229,7 +229,7 @@ export default {
           points: 96
         },{
           studentId: 20190429,
-          studentName: '吕东泽',
+          studentName: '吕*',
           gender: '男',
           term: '2019年',
           weightPoint: 15,
@@ -241,7 +241,7 @@ export default {
           points: 93
         },{
           studentId: 20190941,
-          studentName: '华瑞',
+          studentName: '华*',
           gender: '男',
           term: '2019年',
           weightPoint: 13,
@@ -253,7 +253,7 @@ export default {
           points: 91
         },{
           studentId: 20190232,
-          studentName: '周永康',
+          studentName: '周*',
           gender: '男',
           term: '2019年',
           weightPoint: 11,
@@ -265,7 +265,7 @@ export default {
           points: 90
         },{
           studentId: 20190634,
-          studentName: '吴思衡',
+          studentName: '吴*',
           gender: '男',
           term: '2019年',
           weightPoint: 14,
@@ -277,7 +277,7 @@ export default {
           points: 90
         },{
           studentId: 20190619,
-          studentName: '李彦军',
+          studentName: '李*',
           gender: '男',
           term: '2019年',
           weightPoint: 13,
@@ -289,7 +289,7 @@ export default {
           points: 89
         },{
           studentId: 20190929,
-          studentName: '陈志浩',
+          studentName: '陈*',
           gender: '男',
           term: '2019年',
           weightPoint: 15,
@@ -301,7 +301,7 @@ export default {
           points: 88
         },{
           studentId: 20190921,
-          studentName: '杨博宇',
+          studentName: '杨*',
           gender: '男',
           term: '2019年',
           weightPoint: 12,
@@ -314,7 +314,7 @@ export default {
         },
         {
           studentId: 20190121,
-          studentName: '谢钰磊',
+          studentName: '谢*',
           gender: '男',
           term: '2019年',
           weightPoint: 11,
